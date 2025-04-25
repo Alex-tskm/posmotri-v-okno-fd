@@ -78,11 +78,12 @@ body {
 
 .content__list-container {
   display: flex;
-  max-height: 300px;
+  min-height: 301px;
   flex-direction: column;
   overflow-y: auto;
   position: relative;
   gap: 30px;
+  block-size: 298px;
 }
 
 .content__list {
@@ -117,15 +118,13 @@ body {
   object-fit: cover;
   height: 386px;
   width: 711px;
+  object-position: center;
 }
 
 .content__list-item {
   display: inline-block;
   padding: 0px 3px;
-  /*  margin-bottom: 30px;*/
   width: 100%;
-  /*  padding-left: 3px;
-  padding-right: 3px;*/
 }
 
 .content__video-card {
@@ -145,7 +144,6 @@ body {
   flex-grow: 1;
   flex-direction: column;
   row-gap: 6px;
-  /*max-width: 196px;*/
 }
 
 .search-form__fieldset {
@@ -174,8 +172,6 @@ body {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   text-align: left;
-  /*margin-bottom: 26px;
-  padding-bottom: 0;*/
 }
 
 .search-form__pseudo-checkbox {
@@ -253,6 +249,7 @@ body {
   width: fit-content;
   flex-direction: row;
   cursor: pointer;
+  align-items: center;
 }
 
 .search-form__textfield {
@@ -272,7 +269,6 @@ body {
 
 .search-form__textfield:focus {
   outline: none;
-  /*border: none; */
 }
 
 .search-form__label:has(input:focus-visible) {
@@ -313,15 +309,17 @@ body {
   cursor: pointer;
   padding-top: 6px;
   padding-bottom: 6px;
+  margin-left: 2px;
 }
 
 .search-form__submit-button {
-  width: 194px;
+  min-width: 194px;
   align-self: flex-end;
 }
 
 .more-button {
-  width: 100%;
+  width: calc(100% - 4px);
+  margin-bottom: 3px;
 }
 
 .button:focus {
